@@ -1,32 +1,20 @@
-package org.example;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-/**
- * 1. Реализуйте метод, который запрашивает у пользователя ввод дробного числа (типа float),
- * и возвращает введенное значение. Ввод текста вместо числа не должно приводить к падению приложения,
- * вместо этого, необходимо повторно запросить у пользователя ввод данных.
- * 2. Если необходимо, исправьте данный код https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/edit
- * 3. Дан следующий код, исправьте его там, где требуется https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/edit.
- * 4. Разработайте программу, которая выбросит Exception, когда пользователь вводит пустую строку.
- * Пользователю должно показаться сообщение, что пустые строки вводить нельзя.
- */
 public class Homework_2 {
     public static void main(String[] args) throws IOException {
         GetFloat();  // к Задаче 1.
         double[] intArray = new double[]{1, 3, 3, 5, 6, 23, 2, 13, 34, 98}; // к Задаче 2.
         try {
-         int d = 1;
-         double catchedRes1 = intArray[8] / d;
-         System.out.println("catchedRes1 = " + catchedRes1);
-      } catch (ArithmeticException e) {
-         System.err.println("Catching exception: " + e);
-      }
+            int d = 1;
+            double catchedRes1 = intArray[8] / d;
+            System.out.println("catchedRes1 = " + catchedRes1);
+        } catch (ArithmeticException e) {
+            System.err.println("Catching exception: " + e);
+        }
         try {               // К Задаче 3.
             int a = 90;
             int b = 3;
@@ -90,7 +78,7 @@ public class Homework_2 {
      */
     private static void printSum(Integer a, Integer b)  {
         System.out.println(a + b);
-        }
+    }
 
     private static void getString () throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
